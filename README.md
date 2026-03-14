@@ -6,15 +6,24 @@ HearthNet is a protocol and reference implementation for coordinating multiple A
 
 📄 **Paper:** _HearthNet: Persistent Multi-Agent Orchestration for Smart Home on Commodity Edge Hardware_ (CAIS 2026)  
 🎬 **Demo Video:** [Coming soon]  
-🌐 **Interactive Demo:** [Coming soon]
+🌐 **Interactive Demo:** https://hearthnet.vercel.app/: 
+The interactive demo replays the full protocol trace from our deployed prototype. Since the physical lab cannot be accessed remotely, the demo uses a pre-recorded trace of all Git commits from a live run.
 
+**How to use:**
+1. **Browse the timeline** — scroll through all events across the three demo scenes. Each commit shows the agent (color-coded), message type, and content.
+2. **Click any commit** to inspect it in the detail panel (right side) — see the full hash, timestamp, author, and changed files.
+3. **Switch scenes** using the tabs at the top: `All`, `1` (Coordinated Actuation), `2` (Conflict Resolution), `3` (Freshness Verification).
+4. **Replay mode** — click the ▶️▶️ button in the toolbar to enter replay. Use ▶️ to play through events with real-time pacing, or step manually with ⏪/⏩. Adjust speed (0.5×–4×) to watch the protocol unfold.
+5. **Topology graph** (left panel) — shows directed message flow between agents, animated on each event during replay.
+
+The trace contains 38 events across 4 agents (Rupert, Jeeves, Darcy, Dewey) managing real smart home devices.
 ---
 
 ## Architecture
 
 ```
 ┌──────────┐     MQTT      ┌──────────┐     MQTT      ┌──────────┐
-│  Rupert  │◄────────────►│  Jeeves  │◄────────────►│  Darcy   │
+│  Rupert  │◄────────────► │  Jeeves  │◄────────────► │  Darcy   │
 │  (root)  │               │ (HA mgr) │               │ (mobile) │
 └────┬─────┘               └────┬─────┘               └────┬─────┘
      │                          │                          │
@@ -179,7 +188,6 @@ MIT
 ```bibtex
 @inproceedings{hearthnet2026,
   title={HearthNet: Persistent Multi-Agent Orchestration for Smart Home on Commodity Edge Hardware},
-  author={[Authors]},
   booktitle={Proceedings of CAIS 2026},
   year={2026}
 }
