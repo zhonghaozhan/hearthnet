@@ -1,0 +1,19 @@
+{
+  "name": "hearthnet",
+  "version": "0.2.0",
+  "description": "HearthNet: Edge Multi-Agent Orchestration for Smart Homes",
+  "private": true,
+  "scripts": {
+    "librarian": "node librarian/dewey-librarian.js",
+    "demo": "bash demo/run-all.sh",
+    "demo:reset": "bash demo/run-all.sh --reset",
+    "scene1": "node demo/scene1-coordinated-actuation.js",
+    "scene2": "node demo/scene2-conflict-resolution.js",
+    "scene3": "node demo/scene3-freshness-verification.js",
+    "test:lease": "node scripts/test-lease.js",
+    "visualizer": "node visualizer/server.js"
+  },
+  "dependencies": {
+    "mqtt": "^5.0.0"
+  }
+}

@@ -1,0 +1,388 @@
+{
+  "project": "HearthNet",
+  "exported_at": "2026-03-13T17:55:01.488Z",
+  "head": "7c5a414eadff4feb535637de5f170adab3f404d6",
+  "total": 38,
+  "commits": [
+    {
+      "hash": "99ecba62c91204156cdcf6de8bc02fd36213ce4a",
+      "short": "99ecba6",
+      "author": "Dewey (Librarian)",
+      "email": "dewey@hearthnet.local",
+      "timestamp": 1773424389000,
+      "subject": "Initial state: devices, policies, structure",
+      "agent": "dewey",
+      "type": "event"
+    },
+    {
+      "hash": "7ec137b9b79a360ef70170de583197fa0ef7578a",
+      "short": "7ec137b",
+      "author": "user",
+      "email": "user@hearthnet.local",
+      "timestamp": 1773424416000,
+      "subject": "[task] user → rupert: Im working from home today, get the room ready.",
+      "agent": "user",
+      "type": "task"
+    },
+    {
+      "hash": "d6dbf5bcd2365c62df29538fd7779521698820b7",
+      "short": "d6dbf5b",
+      "author": "rupert",
+      "email": "rupert@hearthnet.local",
+      "timestamp": 1773424417000,
+      "subject": "[task] rupert → jeeves: Set living room lights to bright neutral for video calls",
+      "agent": "rupert",
+      "type": "task"
+    },
+    {
+      "hash": "7fdacf82b04dd9bc43c7417d8587dde2fcfd1ba6",
+      "short": "7fdacf8",
+      "author": "rupert",
+      "email": "rupert@hearthnet.local",
+      "timestamp": 1773424417000,
+      "subject": "[task] rupert → jeeves: Set speakers to low ambient background",
+      "agent": "rupert",
+      "type": "task"
+    },
+    {
+      "hash": "c556ddfc50053805e2f711012c3beb8b5b7b3d56",
+      "short": "c556ddf",
+      "author": "rupert",
+      "email": "rupert@hearthnet.local",
+      "timestamp": 1773424417000,
+      "subject": "[task] rupert → darcy: Launch focus timer app and enable do-not-disturb",
+      "agent": "rupert",
+      "type": "task"
+    },
+    {
+      "hash": "38cfafc8f2037d421f61cedf4628f9c10a46bdc0",
+      "short": "38cfafc",
+      "author": "rupert",
+      "email": "rupert@hearthnet.local",
+      "timestamp": 1773424417000,
+      "subject": "[task] rupert → darcy: Enable do-not-disturb mode on phone",
+      "agent": "rupert",
+      "type": "task"
+    },
+    {
+      "hash": "00af40e6f0307289f162ebccb43dae86be148f0d",
+      "short": "00af40e",
+      "author": "Dewey",
+      "email": "dewey@hearthnet.local",
+      "timestamp": 1773424419000,
+      "subject": "lease: issued lease-a8b23755-d jeeves→living_room_lights",
+      "agent": "dewey",
+      "type": "lease"
+    },
+    {
+      "hash": "21e42c3de289cb18de6811a77bbfc26e54244e75",
+      "short": "21e42c3",
+      "author": "rupert",
+      "email": "rupert@hearthnet.local",
+      "timestamp": 1773424419000,
+      "subject": "[lease_grant] rupert → jeeves: Lease granted: living_room_lights set_state",
+      "agent": "rupert",
+      "type": "lease_grant"
+    },
+    {
+      "hash": "581a3f764dfafc1c389f92c9f024a283a8eb7d43",
+      "short": "581a3f7",
+      "author": "Dewey",
+      "email": "dewey@hearthnet.local",
+      "timestamp": 1773424419000,
+      "subject": "lease: issued lease-fc723433-9 jeeves→speakers",
+      "agent": "dewey",
+      "type": "lease"
+    },
+    {
+      "hash": "c69f7c1800fa664768ed9bd689a943a7af6540e9",
+      "short": "c69f7c1",
+      "author": "rupert",
+      "email": "rupert@hearthnet.local",
+      "timestamp": 1773424419000,
+      "subject": "[lease_grant] rupert → jeeves: Lease granted: speakers set_state",
+      "agent": "rupert",
+      "type": "lease_grant"
+    },
+    {
+      "hash": "f69f3f79d5f2b93fd07695ad289e0709f5b197d5",
+      "short": "f69f3f7",
+      "author": "Dewey",
+      "email": "dewey@hearthnet.local",
+      "timestamp": 1773424419000,
+      "subject": "lease: issued lease-8cd19957-1 darcy→phone_focus_timer",
+      "agent": "dewey",
+      "type": "lease"
+    },
+    {
+      "hash": "d9c81396523acac8188a2336c9cc71dbf33fa55c",
+      "short": "d9c8139",
+      "author": "rupert",
+      "email": "rupert@hearthnet.local",
+      "timestamp": 1773424420000,
+      "subject": "[lease_grant] rupert → darcy: Lease granted: phone_focus_timer app_launch",
+      "agent": "rupert",
+      "type": "lease_grant"
+    },
+    {
+      "hash": "181d445d4d1fd9f5451ba185c5c1770c9486eb84",
+      "short": "181d445",
+      "author": "Dewey",
+      "email": "dewey@hearthnet.local",
+      "timestamp": 1773424420000,
+      "subject": "lease: issued lease-4fd93fd4-8 darcy→phone_dnd",
+      "agent": "dewey",
+      "type": "lease"
+    },
+    {
+      "hash": "ca37bdc5842a22ed65f24781168d0433a95e332b",
+      "short": "ca37bdc",
+      "author": "rupert",
+      "email": "rupert@hearthnet.local",
+      "timestamp": 1773424420000,
+      "subject": "[lease_grant] rupert → darcy: Lease granted: phone_dnd set_state",
+      "agent": "rupert",
+      "type": "lease_grant"
+    },
+    {
+      "hash": "627ce73509d96661e58230baa2ab6219dbd54ee8",
+      "short": "627ce73",
+      "author": "Dewey",
+      "email": "dewey@hearthnet.local",
+      "timestamp": 1773424421000,
+      "subject": "lease: used lease-a8b23755-d jeeves→living_room_lights",
+      "agent": "dewey",
+      "type": "lease"
+    },
+    {
+      "hash": "44c732921feee50104abece6ed580b39d81ba677",
+      "short": "44c7329",
+      "author": "jeeves",
+      "email": "jeeves@hearthnet.local",
+      "timestamp": 1773424421000,
+      "subject": "[execute] jeeves → device: Executing: lights to 100% neutral via Home Assistant",
+      "agent": "jeeves",
+      "type": "execute"
+    },
+    {
+      "hash": "3955ab63fc045218e6b1f70052e01c3f70691adb",
+      "short": "3955ab6",
+      "author": "jeeves",
+      "email": "jeeves@hearthnet.local",
+      "timestamp": 1773424421000,
+      "subject": "[execute_result] jeeves → rupert: Lights set to 100% bright, neutral white",
+      "agent": "jeeves",
+      "type": "execute_result"
+    },
+    {
+      "hash": "042b3fb426b79e5175de2f0e0dc7b393deae1074",
+      "short": "042b3fb",
+      "author": "Dewey",
+      "email": "dewey@hearthnet.local",
+      "timestamp": 1773424422000,
+      "subject": "lease: rejected lease-fc723433-9 jeeves→speakers",
+      "agent": "dewey",
+      "type": "lease"
+    },
+    {
+      "hash": "998303616e70bd501557428e9beb467e635e1f18",
+      "short": "9983036",
+      "author": "jeeves",
+      "email": "jeeves@hearthnet.local",
+      "timestamp": 1773424422000,
+      "subject": "[execute] jeeves → device: Executing: speakers to 15% ambient | LEASE_REJECTED: lease bound to stale commit: base_commit 38cfafc is 11 commits behind HEAD 3955ab6  stale state",
+      "agent": "jeeves",
+      "type": "execute"
+    },
+    {
+      "hash": "7fa513633ffa150df9038c2a2dc8d3cff5db20ac",
+      "short": "7fa5136",
+      "author": "jeeves",
+      "email": "jeeves@hearthnet.local",
+      "timestamp": 1773424422000,
+      "subject": "[execute_result] jeeves → rupert: Speakers set to 15%, ambient source",
+      "agent": "jeeves",
+      "type": "execute_result"
+    },
+    {
+      "hash": "7166b08bfbf9231e6873b8b8f0d02ac693285894",
+      "short": "7166b08",
+      "author": "Dewey",
+      "email": "dewey@hearthnet.local",
+      "timestamp": 1773424422000,
+      "subject": "lease: rejected lease-8cd19957-1 darcy→phone_focus_timer",
+      "agent": "dewey",
+      "type": "lease"
+    },
+    {
+      "hash": "81abe8214757554b23de5c36dea49cefd70404fc",
+      "short": "81abe82",
+      "author": "darcy",
+      "email": "darcy@hearthnet.local",
+      "timestamp": 1773424422000,
+      "subject": "[execute] darcy → device: Executing: focus timer launched via UI automation | LEASE_REJECTED: lease bound to stale commit: base_commit 38cfafc is 14 commits behind HEAD 7fa5136  stale state",
+      "agent": "darcy",
+      "type": "execute"
+    },
+    {
+      "hash": "553b6185e3beb1ec403dc1b32b3cb1b11d089e48",
+      "short": "553b618",
+      "author": "darcy",
+      "email": "darcy@hearthnet.local",
+      "timestamp": 1773424423000,
+      "subject": "[execute_result] darcy → rupert: Focus timer active (60 min)",
+      "agent": "darcy",
+      "type": "execute_result"
+    },
+    {
+      "hash": "6e625221e8e1f924a540f8f77703a5e113b7acec",
+      "short": "6e62522",
+      "author": "Dewey",
+      "email": "dewey@hearthnet.local",
+      "timestamp": 1773424423000,
+      "subject": "lease: rejected lease-4fd93fd4-8 darcy→phone_dnd",
+      "agent": "dewey",
+      "type": "lease"
+    },
+    {
+      "hash": "aec6730e55e4713440ec21b0a9966dab7d0d5c33",
+      "short": "aec6730",
+      "author": "darcy",
+      "email": "darcy@hearthnet.local",
+      "timestamp": 1773424423000,
+      "subject": "[execute] darcy → device: Executing: DND enabled | LEASE_REJECTED: lease bound to stale commit: base_commit 38cfafc is 17 commits behind HEAD 553b618  stale state",
+      "agent": "darcy",
+      "type": "execute"
+    },
+    {
+      "hash": "c8bac476498750d3f5e22914b6252192bd524335",
+      "short": "c8bac47",
+      "author": "darcy",
+      "email": "darcy@hearthnet.local",
+      "timestamp": 1773424423000,
+      "subject": "[execute_result] darcy → rupert: Do-not-disturb enabled",
+      "agent": "darcy",
+      "type": "execute_result"
+    },
+    {
+      "hash": "7bf14ce1d6e8bc434a7afe3a23b5506aa0386e8c",
+      "short": "7bf14ce",
+      "author": "rupert",
+      "email": "rupert@hearthnet.local",
+      "timestamp": 1773424424000,
+      "subject": "[resolution] rupert → broadcast: Work-from-home mode active. Mode: work_from_home. 4 devices confirmed: lights (1",
+      "agent": "rupert",
+      "type": "resolution"
+    },
+    {
+      "hash": "c4222239b0a58dfd35603b8ff86a97663e63dbca",
+      "short": "c422223",
+      "author": "jeeves",
+      "email": "jeeves@hearthnet.local",
+      "timestamp": 1773424440000,
+      "subject": "[info] jeeves → rupert: Got a batch of actuation requests (lights, speakers, leases) attributed to you a",
+      "agent": "jeeves",
+      "type": "info"
+    },
+    {
+      "hash": "a0473e3c601208f6f81033f9ac108597769d53de",
+      "short": "a0473e3",
+      "author": "jeeves",
+      "email": "jeeves@hearthnet.local",
+      "timestamp": 1773424440000,
+      "subject": "[info] jeeves → rupert: Got a batch of actuation requests (lights, speakers, leases) attributed to you a",
+      "agent": "jeeves",
+      "type": "info"
+    },
+    {
+      "hash": "1ab1479da47aad2c040e0a51f4e034aa2d647688",
+      "short": "1ab1479",
+      "author": "jeeves",
+      "email": "jeeves@hearthnet.local",
+      "timestamp": 1773424448000,
+      "subject": "[lease_request] jeeves → rupert: Scheduled evening wind-down: requesting lease to dim living_room_lights to 20% w | CONFLICT: living_room_lights.brightness",
+      "agent": "jeeves",
+      "type": "lease_request"
+    },
+    {
+      "hash": "a48784405ed32ef466c1f98de5c4913315918682",
+      "short": "a487844",
+      "author": "jeeves",
+      "email": "jeeves@hearthnet.local",
+      "timestamp": 1773424448000,
+      "subject": "[lease_request] jeeves → rupert: Scheduled evening wind-down: requesting lease to dim living_room_lights to 20% w",
+      "agent": "jeeves",
+      "type": "lease_request"
+    },
+    {
+      "hash": "902ac5aacc849af0bc89c27989972329f5cbae4d",
+      "short": "902ac5a",
+      "author": "rupert",
+      "email": "rupert@hearthnet.local",
+      "timestamp": 1773424452000,
+      "subject": "[lease_denied] rupert → jeeves: DENIED: Evening wind-down conflicts with active work-from-home mode. WFH was exp",
+      "agent": "rupert",
+      "type": "lease_denied"
+    },
+    {
+      "hash": "d6596f89f5f5be30a30f61e4600b362a198ef3d4",
+      "short": "d6596f8",
+      "author": "rupert",
+      "email": "rupert@hearthnet.local",
+      "timestamp": 1773424454000,
+      "subject": "[resolution] rupert → broadcast: CONFLICT RESOLVED: Evening wind-down routine DENIED. Work-from-home mode was exp",
+      "agent": "rupert",
+      "type": "resolution"
+    },
+    {
+      "hash": "6c75211ccfcf1b98ef35b25f802e64fce0e9f505",
+      "short": "6c75211",
+      "author": "Dewey",
+      "email": "dewey@hearthnet.local",
+      "timestamp": 1773424468000,
+      "subject": "lease: rejected lease-948e6ec7-3 jeeves→living_room_lights",
+      "agent": "dewey",
+      "type": "lease"
+    },
+    {
+      "hash": "327854b27ea111ce02518a472ea6e7c35c52dc85",
+      "short": "327854b",
+      "author": "jeeves",
+      "email": "jeeves@hearthnet.local",
+      "timestamp": 1773424468000,
+      "subject": "[execute] jeeves → device: Executing: dim lights to 30% (pre-crash evening routine) | LEASE_REJECTED: lease expired 2s ago (expired: 2026-03-13T17:54:26.564Z)",
+      "agent": "jeeves",
+      "type": "execute"
+    },
+    {
+      "hash": "0b4966b9bc0f54be79ec0f0f23f6558055e11bd7",
+      "short": "0b4966b",
+      "author": "jeeves",
+      "email": "jeeves@hearthnet.local",
+      "timestamp": 1773424473000,
+      "subject": "[lease_request] jeeves → rupert: Post-crash recovery: requesting fresh lease for living_room_lights. Current HEAD | CONFLICT: living_room_lights.brightness",
+      "agent": "jeeves",
+      "type": "lease_request"
+    },
+    {
+      "hash": "c2ae824077ca1d14f66ed709e02ea8c24fc6acd8",
+      "short": "c2ae824",
+      "author": "jeeves",
+      "email": "jeeves@hearthnet.local",
+      "timestamp": 1773424473000,
+      "subject": "[lease_request] jeeves → rupert: Post-crash recovery: requesting fresh lease for living_room_lights. Current HEAD",
+      "agent": "jeeves",
+      "type": "lease_request"
+    },
+    {
+      "hash": "7c5a414eadff4feb535637de5f170adab3f404d6",
+      "short": "7c5a414",
+      "author": "rupert",
+      "email": "rupert@hearthnet.local",
+      "timestamp": 1773424474000,
+      "subject": "[lease_denied] rupert → jeeves: DENIED: WFH mode is still active (set by user in Scene 1). Dimming to 30% contra",
+      "agent": "rupert",
+      "type": "lease_denied"
+    }
+  ]
+}

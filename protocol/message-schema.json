@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "HearthNet MQTT Message",
+  "description": "Standard message format for inter-agent communication in HearthNet",
+  "type": "object",
+  "required": ["from", "to", "type", "content", "timestamp", "msg_id"],
+  "properties": {
+    "msg_id": {
+      "type": "string",
+      "description": "Unique message ID (UUID v4)"
+    },
+    "from": {
+      "type": "string",
+      "description": "Sender agent ID (e.g. rupert, jeeves, darcy, dewey)"
+    },
+    "to": {
+      "type": "string",
+      "description": "Recipient agent ID, or 'broadcast' for system-wide"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "task", "response", "ack", "alert",
+        "conflict", "rejection", "resolution",
+        "lease_request", "lease_grant", "lease_denied",
+        "execute", "execute_result"
+      ],
+      "description": "Message type"
+    },
+    "content": {
+      "type": "string",
+      "description": "Human-readable message content"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp"
+    },
+    "base_commit": {
+      "type": "string",
+      "description": "Git commit hash the sender believes is current ground truth",
+      "pattern": "^[0-9a-f]{7,40}$"
+    },
+    "target_device": {
+      "type": "string",
+      "description": "Device being acted upon (e.g. living_room_lights, speakers, phone)"
+    },
+    "desired_state": {
+      "type": "object",
+      "description": "Key-value pairs of desired device state"
+    },
+    "operation": {
+      "type": "string",
+      "description": "Operation type (e.g. set_state, get_state, ui_automation, app_launch, toggle)"
+    },
+    "lease": {
+      "type": "object",
+      "description": "Actuation lease (present on execute messages, issued by root)",
+      "properties": {
+        "lease_id": { "type": "string" },
+        "grantee": { "type": "string" },
+        "target_device": { "type": "string" },
+        "operation": { "type": "string" },
+        "parameter_envelope": { "type": "object" },
+        "base_commit": { "type": "string" },
+        "policy_commit": { "type": "string" },
+        "issued_at": { "type": "string", "format": "date-time" },
+        "expires_at": { "type": "string", "format": "date-time" },
+        "justification": { "type": "string" },
+        "signature": { "type": "string" }
+      }
+    },
+    "parent_msg_id": {
+      "type": "string",
+      "description": "ID of the message this is responding to (for threading)"
+    },
+    "scene": {
+      "type": "string",
+      "description": "Demo scene tag for evaluation tracking"
+    }
+  }
+}
