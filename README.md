@@ -5,8 +5,11 @@
 HearthNet is a protocol and reference implementation for coordinating multiple AI agents managing smart home devices. It uses Git as an append-only audit log and MQTT for real-time agent communication, ensuring every actuation is authorized, conflict-free, and recoverable.
 
 📄 **Paper:** _HearthNet: Persistent Multi-Agent Orchestration for Smart Home on Commodity Edge Hardware_ (CAIS 2026)  
+
 🔧 Framework: https://github.com/zhonghaozhan/hearthnet_framework (PLEASE NOTE: The current repo is a standalone visualizer for demo. If you want to check out the ACTUAL framework, this is the right place to go)
+
 🎬 **Demo Video:** https://www.youtube.com/watch?v=p3ZKDsKifRk  
+
 🌐 **Interactive Demo:** https://hearthnet.vercel.app/: 
 The interactive demo replays the full protocol trace from our deployed prototype. Since the physical lab cannot be accessed remotely, the demo uses a pre-recorded trace of all Git commits from a live run.
 
