@@ -19,13 +19,15 @@
 | 📄 **Paper** | _HearthNet: Edge Multi-Agent Orchestration for Smart Homes_ (CAIS 2026) |
 | 🔧 **Framework** | [`hearthnet_framework`](https://github.com/zhonghaozhan/hearthnet_framework) — full protocol implementation (this repo is the standalone demo visualizer) |
 | 🎬 **Demo Video** | [YouTube (3 min)](https://www.youtube.com/watch?v=p3ZKDsKifRk) |
-| 🌐 **Interactive Demo** | [hearthnet.vercel.app](https://hearthnet.vercel.app/) |
+| 🌐 **Interactive Demo** | [hearthnet.vercel.app](https://hearthnet.vercel.app/) — **no setup required; try it now** |
 
 ---
 
 ## Why HearthNet?
 
-Existing smart-home platforms treat AI assistants as isolated voice endpoints. When multiple agents share the same physical environment, there is no principled mechanism for authorization, conflict detection, or crash recovery. HearthNet addresses this gap with three ideas: a lease-gated actuation protocol, Git-based append-only state, and an explicit conflict-resolution policy layer — all orchestrated over MQTT on hardware anyone can buy.
+Most multi-agent smart-home work today puts all agents behind a single gateway — sub-agents of one LLM orchestrator, addressing non-physical layers like intent parsing or routine scheduling. None of them run as persistent, independent processes that directly actuate heterogeneous IoT hardware across separate edge nodes.
+
+HearthNet fills this gap. It deploys four persistent agents with distinct roles (orchestrator, Home Assistant controller, mobile controller, librarian) across commodity devices, coordinating over MQTT and using Git as a shared append-only ledger. This design surfaces the hard problems that single-gateway setups never encounter: concurrent actuation conflicts, stale-state replay after a crash, and lease-based authorization when no single process owns the truth.
 
 ---
 
@@ -102,7 +104,7 @@ Results from five repeated runs of each scene (`node demo/run-metrics.js`):
 
 ## Interactive Demo
 
-Because the physical lab cannot be accessed remotely, the interactive demo at [hearthnet.vercel.app](https://hearthnet.vercel.app/) replays a pre-recorded protocol trace captured from a live deployment.
+> **No setup required.** The interactive demo at [**hearthnet.vercel.app**](https://hearthnet.vercel.app/) replays the full protocol trace from our physical deployment — you can explore every commit, conflict, and resolution right in the browser.
 
 <details>
 <summary><strong>How to explore the demo</strong></summary>
@@ -152,8 +154,8 @@ export HEARTHNET_ROOT_SECRET=your-secret-here
 
 # MQTT credentials
 export MQTT_HOST=127.0.0.1
-export MQTT_USER=rupert
-export MQTT_PASS=agentcomms2026
+export MQTT_USER=your-user
+export MQTT_PASS=your-password
 ```
 
 ### Run the demo
@@ -231,3 +233,9 @@ MIT — see [`LICENSE`](LICENSE).
 ## Citation
 
 Coming soon — paper under review at ACM CAIS 2026.
+
+## Contact
+
+Built by [Zhonghao Zhan](https://x.com/paiqi_peccy) at Imperial College London.
+
+Questions, collaborations, or ideas? Open an [issue](https://github.com/zhonghaozhan/hearthnet/issues) or reach out on [X](https://x.com/paiqi_peccy).
