@@ -126,7 +126,7 @@ The entire prototype runs on commodity hardware (total: ≈ £400 for the edge-c
 | Device | Role |
 |--------|------|
 | Mac mini M4 | Root agent (Rupert), MQTT broker |
-| Intel NUC N150 | Home Assistant, Librarian (Dewey), Jeeves |
+| Intel NUC 11 | Home Assistant, Librarian (Dewey), Jeeves |
 | Android phone | Mobile agent (Darcy) via ADB |
 | Philips Hue bridge + bulbs | Smart lights |
 | Network | Tailscale mesh (WireGuard) |
