@@ -10,9 +10,13 @@
   <sub>▶️ Watch the 3-minute demo on YouTube</sub>
 </p>
 
-> **ACM CAIS 2026 — System Demonstration**
+ **ACM CAIS 2026 — System Demonstration**
 >
 > HearthNet is a protocol and reference implementation for coordinating multiple AI agents that manage smart-home devices. It uses Git as an append-only audit log and MQTT for real-time inter-agent communication, ensuring every actuation is authorized, conflict-free, and recoverable — all running on commodity edge hardware.
+>
+
+This repository is the reproducible demo visualizer and scene replay for HearthNet. It contains deterministic scene scripts and a pre-recorded protocol trace from our physical deployment, allowing anyone to inspect and replay the three demo scenarios from the paper without needing API keys, an MQTT broker, or physical smart-home hardware. The scene scripts are intentionally hardcoded to ensure exact reproducibility of the demo video.
+For the full framework implementation : including LLM-driven intent decomposition, live MQTT coordination, device adapters, and the complete agent loop, please see *hearthnet_framework* below.
 
 | | |
 |---|---|
